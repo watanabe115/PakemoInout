@@ -22,7 +22,8 @@ namespace PakemoMember
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DbAccess.GetData();
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -34,7 +35,13 @@ namespace PakemoMember
         {
             dataGridView1.Rows.RemoveAt(0);
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = DbAccess.GetData();
+        }
     }
+
     internal class DbAccess
     {
         internal static DataTable GetData()
