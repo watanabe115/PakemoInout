@@ -1,7 +1,7 @@
 ﻿
 namespace PakemoMember
 {
-    partial class RegistrationForm
+    partial class FrmRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -113,6 +113,7 @@ namespace PakemoMember
             // 
             // btnRegistration
             // 
+            this.btnRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistration.Location = new System.Drawing.Point(332, 12);
             this.btnRegistration.Name = "btnRegistration";
             this.btnRegistration.Size = new System.Drawing.Size(75, 38);
@@ -123,6 +124,7 @@ namespace PakemoMember
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Location = new System.Drawing.Point(332, 56);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 27);
@@ -146,7 +148,6 @@ namespace PakemoMember
             this.textBoxMemberID.Name = "textBoxMemberID";
             this.textBoxMemberID.Size = new System.Drawing.Size(101, 19);
             this.textBoxMemberID.TabIndex = 10;
-            this.textBoxMemberID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxGooglePass
             // 
@@ -154,7 +155,6 @@ namespace PakemoMember
             this.textBoxGooglePass.Name = "textBoxGooglePass";
             this.textBoxGooglePass.Size = new System.Drawing.Size(155, 19);
             this.textBoxGooglePass.TabIndex = 11;
-            this.textBoxGooglePass.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxGoogleID
             // 
@@ -162,7 +162,6 @@ namespace PakemoMember
             this.textBoxGoogleID.Name = "textBoxGoogleID";
             this.textBoxGoogleID.Size = new System.Drawing.Size(155, 19);
             this.textBoxGoogleID.TabIndex = 12;
-            this.textBoxGoogleID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxMemberKCard
             // 
@@ -178,7 +177,6 @@ namespace PakemoMember
             this.textBoxMemberKana.Name = "textBoxMemberKana";
             this.textBoxMemberKana.Size = new System.Drawing.Size(155, 19);
             this.textBoxMemberKana.TabIndex = 14;
-            this.textBoxMemberKana.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxMemberName
             // 
@@ -186,7 +184,6 @@ namespace PakemoMember
             this.textBoxMemberName.Name = "textBoxMemberName";
             this.textBoxMemberName.Size = new System.Drawing.Size(155, 19);
             this.textBoxMemberName.TabIndex = 15;
-            this.textBoxMemberName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // comboBoxMemberBusyo
             // 
@@ -202,7 +199,7 @@ namespace PakemoMember
             this.comboBoxMemberBusyo.Size = new System.Drawing.Size(121, 20);
             this.comboBoxMemberBusyo.TabIndex = 16;
             // 
-            // RegistrationForm
+            // FrmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,7 +221,8 @@ namespace PakemoMember
             this.Controls.Add(this.labelMemberKana);
             this.Controls.Add(this.labelMemberName);
             this.Controls.Add(this.labelMemberID);
-            this.Name = "RegistrationForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "FrmRegister";
             this.Text = "登録";
             this.ResumeLayout(false);
             this.PerformLayout();
