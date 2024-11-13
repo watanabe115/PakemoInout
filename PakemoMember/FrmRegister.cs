@@ -94,12 +94,31 @@ namespace PakemoMember
         }
 
 
-        // イベント
+        // コンストラクタ
         public FrmRegister()
         {
             InitializeComponent();
         }
+        public FrmRegister(DataTable dataTable)
+        {
+            InitializeComponent();
 
+            inTable = dataTable;
+
+            textBoxMemberID.Enabled = false;
+            textBoxMemberID.Text = inTable.Rows[0][0].ToString();
+            textBoxMemberName.Text = inTable.Rows[0][1].ToString();
+            textBoxMemberKana.Text  = inTable.Rows[0][2].ToString();
+            comboBoxMemberBusyo.SelectedIndex = int.Parse(inTable.Rows[0][3].ToString());
+            textBoxMemberKCard.Text = inTable.Rows[0][4].ToString();
+            textBoxGoogleID.Text = inTable.Rows[0][5].ToString();
+            textBoxGooglePass.Text = inTable.Rows[0][6].ToString();
+        }
+
+
+        DataTable inTable;
+
+        // イベント
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -107,9 +126,14 @@ namespace PakemoMember
 
         private void btnRegistration_Click(object sender, EventArgs e)
         {
-            DbCRUD.Insert(this);
-           // MainForm.dataGridView1.DataSource = DbAccess.GetData();
-           // マスタ画面を更新したい
+            if(inTable == null)
+            {
+                DbCRUD.Insert(this);
+            }
+            else
+            {
+                DbCRUD.Update(this, inTable.Rows[0][0].ToString());
+            }
             this.Close();
         }
 

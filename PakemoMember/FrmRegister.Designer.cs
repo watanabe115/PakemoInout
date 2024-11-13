@@ -169,7 +169,6 @@ namespace PakemoMember
             this.textBoxMemberKCard.Name = "textBoxMemberKCard";
             this.textBoxMemberKCard.Size = new System.Drawing.Size(155, 19);
             this.textBoxMemberKCard.TabIndex = 13;
-            this.textBoxMemberKCard.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxMemberKana
             // 
@@ -223,7 +222,7 @@ namespace PakemoMember
             this.Controls.Add(this.labelMemberID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmRegister";
-            this.Text = "登録";
+            this.Text = "登録・編集";
             this.ResumeLayout(false);
             this.PerformLayout();
 
